@@ -10,6 +10,8 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Welcome to The Flower Shop | Flowerstalkng</title>
 </head>
@@ -49,19 +51,30 @@
         </div>
     </header>
     <div class="container">
-        <section class="hero relative">
-            <div class="hero-item">
+        <section class="owl-carousel owl-theme hero">
+            <div class="slide hero-item-1 relative">
                 <div class="hero-text">
                     <h1>Gifts and Flowers for your beloved</h1>
                     <p>We pride ourselves in the quality of our products and services</p>
                     <button>Shop Now</button>
                 </div>
+                <img src="img/hero.png" alt="" class="absolute">
             </div>
-            <img src="img/hero.png" alt="" class="absolute">
-            <div class="slide-buttons-wrap flex absolute">
-                <div class="slide-button black"></div>
-                <div class="slide-button"></div>
-                <div class="slide-button"></div>
+            <div class="slide hero-item-2 relative">
+                <div class="hero-text">
+                    <h1>This is the second page</h1>
+                    <p>We pride ourselves in the quality of our products and services</p>
+                    <button>Shop Now</button>
+                </div>
+                <img src="img/hero.png" alt="" class="absolute">
+            </div>
+            <div class="slide hero-item-3 relative">
+                <div class="hero-text">
+                    <h1>This is the third page</h1>
+                    <p>We pride ourselves in the quality of our products and services</p>
+                    <button>Shop Now</button>
+                </div>
+                <img src="img/hero.png" alt="" class="absolute">
             </div>
         </section>
         <section class="banner flex">
@@ -216,6 +229,8 @@
             <p class="copyright">&copy; 2021 &nbsp; FlowerStalkNg. All Rights Reserved | Privacy Policy</p>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
