@@ -1,6 +1,7 @@
 .contact-container {
     margin: 40px 0;
     text-align: center;
+    
 }
 .contact-container h1 {
     margin-bottom: 30px;
@@ -37,7 +38,7 @@
 }
 .contact-address p {
     color: #707070;
-    font-size: 14px;
+    font-size: 16px;
 }
 .contact-details {
     margin-top: 30px;
@@ -46,4 +47,26 @@
     background-color: #001514;
     color: white;
     border: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width:760px) {
+    .contact-container {
+        margin: 10px 0 20px;
+    }
+    .contact-container h1 {
+        margin-bottom: 10px;
+    }
+    .contact-us-wrap {
+        flex-direction: column;
+        padding: 30px 30px;
+    }
+    .contact-us-wrap form {
+        width: 100%;
+        max-width: 500px;
+    }
+    .contact-form, .contact-address {
+        width: 100%;
+        padding: 0;
+    }
 }

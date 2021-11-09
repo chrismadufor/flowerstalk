@@ -28,21 +28,25 @@
             </div>
         </div>
         <div class="logo relative flex center">
-            <img src="img/logo.png" alt="">
+            <div class="logo-img flex">
+                <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
+                <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
+            </div>
+            
             <div class="user-icons flex absolute">
                 <img src="img/user.svg" alt="">
-                <div class="relative" onclick="goToCart();">
+                <div class="relative pointer" onclick="goToCart();">
                     <img src="img/bag.svg" alt="">
                     <div class="cart-number flex center absolute">3</div>
                 </div>                
             </div>
         </div>
-        <div class="nav-links relative flex">
+        <div class="nav-links relative flex center">
             <ul class="flex center">
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
                 <li><a href="#">About Us</a></li>
+                <li><a href="categories.html">Categories</a></li>
                 <li><a href="#">Events</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
             </ul>
             <div class="search absolute">
                 <input type="search" placeholder="Search">
@@ -50,6 +54,12 @@
             </div>
         </div>
     </header>
+    <ul class="mobile-nav show-nav">
+        <li><a href="#">About Us</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+    </ul>
     <div class="container">
         <section class="owl-carousel owl-theme hero">
             <div class="slide hero-item-1 relative">
@@ -58,7 +68,7 @@
                     <p>We pride ourselves in the quality of our products and services</p>
                     <button>Shop Now</button>
                 </div>
-                <img src="img/hero.png" alt="" class="absolute">
+                <img src="img/hero1.png" alt="" class="absolute">
             </div>
             <div class="slide hero-item-2 relative">
                 <div class="hero-text">
@@ -66,7 +76,7 @@
                     <p>We pride ourselves in the quality of our products and services</p>
                     <button>Shop Now</button>
                 </div>
-                <img src="img/hero.png" alt="" class="absolute">
+                <img src="img/hero1.png" alt="" class="absolute">
             </div>
             <div class="slide hero-item-3 relative">
                 <div class="hero-text">
@@ -74,7 +84,7 @@
                     <p>We pride ourselves in the quality of our products and services</p>
                     <button>Shop Now</button>
                 </div>
-                <img src="img/hero.png" alt="" class="absolute">
+                <img src="img/hero1.png" alt="" class="absolute">
             </div>
         </section>
         <section class="banner flex">
@@ -231,6 +241,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

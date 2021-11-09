@@ -10,9 +10,9 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contact-us.css">
-    <title>Contact Us | Flowerstalkng</title>
+    <title>Your Cart | Flowerstalkng</title>
 </head>
 <body>
     <header> 
@@ -59,27 +59,28 @@
         <li><a href="#">Events</a></li>
         <li><a href="contact-us.html">Contact</a></li>
     </ul>
-    <div class="contact-container">
-        <h1 class="page-title">Contact Us</h1>
-        <div class="contact-us-wrap">
-            <form class="contact-form">
-                <h3>Get in touch</h3>
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email">
-                <input type="text" placeholder="Your Phone">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
-                <input type="submit" value="SEND" class="submit">
-            </form>
-            <div class="contact-address">
-                <h3>Office Location</h3>
-                <p>#34 Oshodi Bypass, Ejogbo Idumota Lagos</p>
-                <div class="contact-details">
-                    <p><i class="far fa-phone-alt"></i> 08092443374</p>
-                    <p><i class="far fa-envelope"></i> info@flowerstalkng.org</p>
-                </div>
+    <div class="page-container">
+        <h1>Payment</h1>
+        <div class="payment-details-wrap">
+            <p><b>Payment Details</b></p> <hr>
+            <p><b>Account Name: </b> Flowerstalk</p> <hr>
+            <p><b>Account Number: </b> 0012345678</p> <hr>
+            <p><b>Bank: </b> Guaranteed Trust Bank</p>
+        </div>
+        <div class="made-payment">
+            <p>Already made payment?</p>
+            <a href="payment-proof.html"><button>Upload Reciept</button></a>
+        </div>
+    </div>
+    <div class="payment-page-modal modal">
+        <div class="modal-container">
+            <div class="modal-content">
+                <i class="fas fa-exclamation"></i>
+                <p>You need to make payment and upload your proof.</p>
+                <p>Click continue to see payment details.</p>
+                <button onclick="closeModal()">Continue</button>
             </div>
         </div>
-        
     </div>
     <footer class="flex center">
         <p class="footer-heading">Join our Exclusive Mailing List</p>
@@ -102,4 +103,4 @@
     </footer>
     <script src="js/index.js"></script>
 </body>
-</html>
+</html> 

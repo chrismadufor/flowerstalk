@@ -10,9 +10,9 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contact-us.css">
-    <title>Contact Us | Flowerstalkng</title>
+    <title>Choose a delivery method | Flowerstalkng</title>
 </head>
 <body>
     <header> 
@@ -59,27 +59,42 @@
         <li><a href="#">Events</a></li>
         <li><a href="contact-us.html">Contact</a></li>
     </ul>
-    <div class="contact-container">
-        <h1 class="page-title">Contact Us</h1>
-        <div class="contact-us-wrap">
-            <form class="contact-form">
-                <h3>Get in touch</h3>
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email">
-                <input type="text" placeholder="Your Phone">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
-                <input type="submit" value="SEND" class="submit">
-            </form>
-            <div class="contact-address">
-                <h3>Office Location</h3>
-                <p>#34 Oshodi Bypass, Ejogbo Idumota Lagos</p>
-                <div class="contact-details">
-                    <p><i class="far fa-phone-alt"></i> 08092443374</p>
-                    <p><i class="far fa-envelope"></i> info@flowerstalkng.org</p>
-                </div>
+    <div class="page-container">
+        <h1 class="page-title">Choose delivery option</h1>
+        <div class="wrap">
+            <div class="delivery-wrap">
+                <div class="delivery-options flex between">
+                    <div class="radio-wrap">
+                        <input type="radio" name="delivery-option" id="delivery" checked onclick="pickDeliveryMethod();"> <p>Delivery</p>
+                    </div>
+                    <div class="radio-wrap">
+                        <input type="radio" name="delivery-option" id="pickup" onclick="pickDeliveryMethod();">
+                        <p>Pick-up</p>
+                    </div>
+                    
+                </div>     
+                <div class="inputs-wrap">
+                    <div class="delivery-inputs">
+                        <input type="text" placeholder="Enter your name">
+                        <input type="email" placeholder="Enter your email">
+                        <input type="text" placeholder="Enter your phone number">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Enter your address"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Comments"></textarea>
+                    </div>
+                    <div class="pickup-inputs  hide-inputs">
+                        <input type="text" placeholder="Enter your name">
+                        <input type="email" placeholder="Enter your email">
+                        <input type="text" placeholder="Enter your phone number">
+                        <select name="location" id="location">
+                            <option value="location">Location</option>
+                        </select>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Comments"></textarea>
+                    </div>
+                </div> 
             </div>
+            <button>Place Order</button> 
         </div>
-        
+           
     </div>
     <footer class="flex center">
         <p class="footer-heading">Join our Exclusive Mailing List</p>
@@ -102,4 +117,4 @@
     </footer>
     <script src="js/index.js"></script>
 </body>
-</html>
+</html> 

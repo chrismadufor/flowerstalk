@@ -10,8 +10,8 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Your Cart | Flowerstalkng</title>
 </head>
 <body>
@@ -27,10 +27,14 @@
             </div>
         </div>
         <div class="logo relative flex center">
-            <img src="img/logo.png" alt="" onclick="goToHomePage();">
+            <div class="logo-img flex">
+                <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
+                <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
+            </div>
+            
             <div class="user-icons flex absolute">
                 <img src="img/user.svg" alt="">
-                <div class="relative" onclick="goToCart();">
+                <div class="relative pointer" onclick="goToCart();">
                     <img src="img/bag.svg" alt="">
                     <div class="cart-number flex center absolute">3</div>
                 </div>                
@@ -49,6 +53,12 @@
             </div>
         </div>
     </header>
+    <ul class="mobile-nav show-nav">
+        <li><a href="#">About Us</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+    </ul>
     <div class="cart-container">
         <h1 class="page-title">Your Cart</h1>
          <div class="cart-items-wrap">
@@ -64,9 +74,9 @@
                     <p>N3,500</p>
                     <p>x</p>
                     <div class="count-wrap flex">
-                        <div class="sign flex"> <p> -</p> </div>
+                        <i class="far fa-minus-circle"></i>
                         <input type="text" class="number" value="2">
-                        <div class="sign flex"> <p>+</p> </div>
+                        <i class="far fa-plus-circle"></i>
                     </div>
                 </div>
                 <div class="total one flex between">
@@ -89,9 +99,9 @@
                     <p>N3,500</p>
                     <p>x</p>
                     <div class="count-wrap flex">
-                        <div class="sign flex"> <p> -</p> </div>
+                        <i class="far fa-minus-circle"></i>
                         <input type="text" class="number" value="1">
-                        <div class="sign flex"> <p>+</p> </div>
+                        <i class="far fa-plus-circle"></i>
                     </div>
                 </div>
                 <div class="total one flex between">
@@ -114,9 +124,9 @@
                     <p>N2,000</p>
                     <p>x</p>
                     <div class="count-wrap flex">
-                        <div class="sign flex"> <p> -</p> </div>
+                        <i class="far fa-minus-circle"></i>
                         <input type="text" class="number" value="2">
-                        <div class="sign flex"> <p>+</p> </div>
+                        <i class="far fa-plus-circle"></i>
                     </div>
                 </div>
                 <div class="total one flex between">
