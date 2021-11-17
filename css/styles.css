@@ -383,6 +383,13 @@ ul.show-nav {
     .deals{
         padding: 20px 5%;
     }
+    .category.deals-wrap {
+        flex-wrap: wrap;
+    }
+    .category.deals-wrap .deals-item {
+        width: 45%;
+        min-width: unset;
+    }
     .deals-wrap {
         flex-wrap: nowrap;
         overflow: scroll ;
