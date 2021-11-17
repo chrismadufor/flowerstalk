@@ -114,7 +114,7 @@ section, section.gallery {
 .owl-carousel {
     margin-bottom: -10px;
 }
-.slide > img {
+.slide-img {
     bottom: 0px;
     right: 10%;
     max-width: 350px;
@@ -366,13 +366,13 @@ ul.show-nav {
     .slide {
         max-height: 450px;
     }
-    .slide > img {
+    .slide-img {
         max-width: 320px;
         right: 10%;
     }
 }
 @media (max-width: 850px) {
-    .slide > img {
+    .slide-img {
         right: 5%;
         max-width: 300px;
     }
@@ -380,8 +380,17 @@ ul.show-nav {
         font-size: 40px;
         width: 60%;
     }
+    .deals{
+        padding: 20px 5%;
+    }
+    .deals-wrap {
+        flex-wrap: nowrap;
+        overflow: scroll ;
+    }
     .deals-item {
-        width: 45%;
+        padding: 0;
+        margin: 0 20px 20px 0;
+        min-width: 250px;
     }
 }
 @media (max-width: 760px) {
@@ -427,6 +436,7 @@ ul.show-nav {
         padding: 10px 0;
         transition: transform 0.5s;
         transform: translateX(0%);
+        z-index: 1000;
     }
     .mobile-nav li {
         /* margin: 10px 0; */
@@ -434,16 +444,69 @@ ul.show-nav {
         border-bottom: 1px solid #eee;
         text-align: center;
     }
+    
+    .slide {
+        max-height: 350px;
+    }
+    .owl-dots {
+        bottom: 5%;
+    }
+    .owl-carousel .owl-item img {
+        display: none;
+    }
+    .hero-text {
+        text-align: center;
+        width: 100%;
+    }
+    .slide-img {
+        width: 35%;
+        max-width: 250px;
+        right: 5%;
+        display: none;
+    }
+    .hero-text > h1 {
+        font-size: 28px;
+        width: unset;
+    }
+    .hero-text > p {
+        max-width: unset;
+    }
+    .banner {
+        padding: 0 10px;
+    }
+    .banner-item > img {
+        width: 20px;
+        margin-right: 10px;
+    }
+    .banner-item {
+        width: 30%;
+    }
+    .banner-item-text > p {
+        font-size: 10px;
+    }
+    
     .section-heading {
         padding: 20px 5%;
     }
+    .section-heading > h2 {
+        margin: 0 10px;
+        font-weight: 500;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .section-heading > hr {
+        border-top: 2px solid rgb(192, 192, 192);
+        width: 20%;
+    }
     .deals {
         width: 100vmin;
-        padding: 20px;
+        padding: 20px 10px;
     }
     .deals-item {
         padding: 0;
-        margin-bottom: 20px;
+        margin: 0 10px 20px 0;
+        min-width: 150px;
     }
     .deals-item-text-wrap {
         padding: 10px;
@@ -453,6 +516,9 @@ ul.show-nav {
     }
     .deals-item > img {
         height: 40vmin;
+    }
+    .deals-nav {
+        display: none;
     }
     footer.center {
         padding: 20px;
@@ -476,4 +542,13 @@ ul.show-nav {
     .footer-heading {
         font-size: 18px;
     }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+    .gallery-item{
+        width: 33%;
+    }
 }
+                                                                    
