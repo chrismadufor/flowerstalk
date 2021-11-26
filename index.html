@@ -17,40 +17,41 @@
 </head>
 <body>
     <header> 
-        <div class="top-nav flex between">
-            <div class="call-us">
-                <p><b>CALL US:</b> &nbsp; <span>08184389245</span></p>                
+        <div class="section-wrap">
+            <div class="top-nav flex between">
+                <div class="call-us">
+                    <p><b>CALL US:</b> &nbsp; <span>08184389245</span></p>                
+                </div>
+                <div class="social">
+                    <img src="img/ig.svg" alt="">
+                    <img src="img/twitter.svg" alt="">
+                    <img src="img/fb.svg" alt="">
+                </div>
             </div>
-            <div class="social">
-                <img src="img/ig.svg" alt="">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/fb.svg" alt="">
+            <div class="logo relative flex center">
+                <div class="logo-img flex">
+                    <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
+                    <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
+                </div>
+                
+                <div class="user-icons flex absolute">
+                    <div class="relative pointer cart-icon" onclick="goToCart();">
+                        <img src="img/bag.svg" alt="">
+                        <div class="cart-number flex center absolute">3</div>
+                    </div>                
+                </div>
             </div>
-        </div>
-        <div class="logo relative flex center">
-            <div class="logo-img flex">
-                <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
-                <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
-            </div>
-            
-            <div class="user-icons flex absolute">
-                <img src="img/user.svg" alt="">
-                <div class="relative pointer" onclick="goToCart();">
-                    <img src="img/bag.svg" alt="">
-                    <div class="cart-number flex center absolute">3</div>
-                </div>                
-            </div>
-        </div>
-        <div class="nav-links relative flex center">
-            <ul class="flex center">
-                <li><a href="#">About Us</a></li>
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-            </ul>
-            <div class="search absolute">
-                <input type="search" placeholder="Search">
-                <i class="fas fa-search absolute"></i>
+            <div class="nav-links relative flex center">
+                <ul class="flex center">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <div class="search absolute">
+                    <input type="search" placeholder="Search">
+                    <i class="fas fa-search absolute"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -87,117 +88,128 @@
                 <img src="img/hero1.png" alt="" class="slide-img absolute">
             </div>
         </section>
-        <section class="banner flex">
-            <div class="banner-item flex">
-                <img src="img/fast.svg" alt="">
-                <div class="banner-item-text">
-                    <p>Shipping</p>
-                    <p class="light-text">Nigeria only</p>
-                </div>
-            </div>
-            <div class="banner-item flex">
-                <img src="img/gift.svg" alt="">
-                <div class="banner-item-text">
-                    <p>Offers and gift</p>
-                    <p class="light-text">Special orders</p>
-                </div>
-            </div>
-            <div class="banner-item flex">
-                <img src="img/shield.svg" alt="">
-                <div class="banner-item-text">
-                    <p>Secure checkout</p>
-                    <p class="light-text">Secured by Flutterwave</p>
-                </div>
-            </div>
-        </section>
-        <section class="deals">
-            <div class="section-heading flex center">
-                <hr> <h2>Deals of the day</h2> <hr>
-            </div>
-            <div class="deals-wrap flex between">
-                <div class="deals-item">
-                    <img src="img/d1.png" alt="">
-                    <div class="deals-item-text-wrap">
-                        <div class="deals-item-text">
-                            <p class="light-text">Flower</p>
-                            <p>Hibiscus Flower</p>
-                            <p class="price"><b>N3,500</b></p>
-                        </div>
-                        <img src="img/cart.svg" alt="">
+        <section class="banner">
+            <div class="section-wrap flex">
+                <div class="banner-item flex">
+                    <img src="img/fast.svg" alt="">
+                    <div class="banner-item-text">
+                        <p>Shipping</p>
+                        <p class="light-text">Nigeria only</p>
                     </div>
                 </div>
-                <div class="deals-item">
-                    <img src="img/d2.png" alt="">
-                    <div class="deals-item-text-wrap">
-                        <div class="deals-item-text">
-                            <p class="light-text">Flower</p>
-                            <p>Hibiscus Flower</p>
-                            <p class="price"><b>N3,500</b></p>
-                        </div>
-                        <img src="img/cart.svg" alt="">
+                <div class="banner-item flex">
+                    <img src="img/gift.svg" alt="">
+                    <div class="banner-item-text">
+                        <p>Offers and gift</p>
+                        <p class="light-text">Special orders</p>
                     </div>
                 </div>
-                <div class="deals-item">
-                    <img src="img/d3.png" alt="">
-                    <div class="deals-item-text-wrap">
-                        <div class="deals-item-text">
-                            <p class="light-text">Flower</p>
-                            <p>Hibiscus Flower</p>
-                            <p class="price"><b>N3,500</b></p>
-                        </div>
-                        <img src="img/cart.svg" alt="">
+                <div class="banner-item flex">
+                    <img src="img/shield.svg" alt="">
+                    <div class="banner-item-text">
+                        <p>Secure checkout</p>
+                        <p class="light-text">Secured by Flutterwave</p>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="text-section">
+            <p>The act of sending flowers conveys your heart’s deepest emotions when you are lost for words. Flowers they say are the closest thing to the natural beauty of our love and there are only few things that can beat flowers. A bouquet of simple gorgeous roses will make someone smile so readily. 
+            Start spreading your joy to loved ones now!!!
+            </p>
+        </section>
         <section class="deals">
-            <div class="section-heading flex center">
-                <hr> <h2>Deals of the day</h2> <hr>
-            </div>
-            <div class="deals-nav flex between">
-                <ul class="flex between">
-                    <li class="active">Birthday</li>
-                    <li>Party</li>
-                    <li>Wedding</li>
-                    <li>Anniversary</li>
-                </ul>
-                <div class="buttons">
-                    <img src="img/left.svg" alt="">
-                    <img src="img/right.svg" alt="">
+            <div class="section-wrap">
+                <div class="section-heading flex center">
+                    <hr> <h2>Deals of the day</h2> <hr>
                 </div>
-            </div>
-            <div class="deals-wrap flex between">
-                <div class="deals-item">
-                    <img src="img/d4.png" alt="">
-                    <div class="deals-item-text-wrap">
-                        <div class="deals-item-text">
-                            <p class="light-text">Flower</p>
-                            <p>Hibiscus Flower</p>
-                            <p><b>N3,500</b></p>
+                <div class="deals-wrap flex center">
+                    <div class="deals-item">
+                        <img src="img/d1.png" alt="">
+                        <div class="deals-item-text-wrap">
+                            <div class="deals-item-text">
+                                <p class="light-text">Flower</p>
+                                <p>Hibiscus Flower</p>
+                                <p class="price"><b>N3,500</b></p>
+                            </div>
+                            <img src="img/cart.svg" alt="" onclick="addItemToCart('p1');">
                         </div>
-                        <img src="img/cart.svg" alt="">
+                    </div>
+                    <div class="deals-item">
+                        <img src="img/d2.png" alt="">
+                        <div class="deals-item-text-wrap">
+                            <div class="deals-item-text">
+                                <p class="light-text">Flower</p>
+                                <p>Hibiscus Flower</p>
+                                <p class="price"><b>N3,500</b></p>
+                            </div>
+                            <img src="img/cart.svg" alt="" onclick="addItemToCart('p2');">
+                        </div>
+                    </div>
+                    <div class="deals-item">
+                        <img src="img/d3.png" alt="">
+                        <div class="deals-item-text-wrap">
+                            <div class="deals-item-text">
+                                <p class="light-text">Flower</p>
+                                <p>Hibiscus Flower</p>
+                                <p class="price"><b>N3,500</b></p>
+                            </div>
+                            <img src="img/cart.svg" alt="" onclick="addItemToCart('p3');">
+                        </div>
                     </div>
                 </div>
-                <div class="deals-item">
-                    <img src="img/d5.png" alt="">
-                    <div class="deals-item-text-wrap">
-                        <div class="deals-item-text">
-                            <p class="light-text">Flower</p>
-                            <p>Hibiscus Flower</p>
-                            <p><b>N3,500</b></p>
-                        </div>
-                        <img src="img/cart.svg" alt="">
+            </div>
+        </section>
+        <section class="deals">
+            <div class="section-wrap">
+                <div class="section-heading flex center">
+                    <hr> <h2>Deals of the day</h2> <hr>
+                </div>
+                <div class="deals-nav flex between">
+                    <ul class="flex between">
+                        <li class="active">Birthday</li>
+                        <li>Party</li>
+                        <li>Wedding</li>
+                        <li>Anniversary</li>
+                    </ul>
+                    <div class="buttons">
+                        <img src="img/left.svg" alt="">
+                        <img src="img/right.svg" alt="">
                     </div>
                 </div>
-                <div class="deals-item">
-                    <img src="img/d6.png" alt="">
-                    <div class="deals-item-text-wrap">
-                        <div class="deals-item-text">
-                            <p class="light-text">Flower</p>
-                            <p>Hibiscus Flower</p>
-                            <p><b>N3,500</b></p>
+                <div class="deals-wrap flex center">
+                    <div class="deals-item">
+                        <img src="img/d4.png" alt="">
+                        <div class="deals-item-text-wrap">
+                            <div class="deals-item-text">
+                                <p class="light-text">Flower</p>
+                                <p>Hibiscus Flower</p>
+                                <p><b>N3,500</b></p>
+                            </div>
+                            <img src="img/cart.svg" alt="" onclick="addItemToCart('p4');">
                         </div>
-                        <img src="img/cart.svg" alt="">
+                    </div>
+                    <div class="deals-item">
+                        <img src="img/d5.png" alt="">
+                        <div class="deals-item-text-wrap">
+                            <div class="deals-item-text">
+                                <p class="light-text">Flower</p>
+                                <p>Hibiscus Flower</p>
+                                <p><b>N3,500</b></p>
+                            </div>
+                            <img src="img/cart.svg" alt="" onclick="addItemToCart('p5');">
+                        </div>
+                    </div>
+                    <div class="deals-item">
+                        <img src="img/d6.png" alt="">
+                        <div class="deals-item-text-wrap">
+                            <div class="deals-item-text">
+                                <p class="light-text">Flower</p>
+                                <p>Hibiscus Flower</p>
+                                <p><b>N3,500</b></p>
+                            </div>
+                            <img src="img/cart.svg" alt="" onclick="addItemToCart('p6');">
+                        </div>
                     </div>
                 </div>
             </div>

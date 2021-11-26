@@ -75,7 +75,7 @@
     border-radius: 50%;
 }
 .cart-text {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600px;
 }
 .total > i {
@@ -324,6 +324,9 @@
     }
     .item-name-wrap, .price-wrap {
         width: 100%;
+    }
+    .price-wrap {
+        max-width: 250px;
     }
     .item-name-wrap, .total-text {
         margin-bottom: 20px;
