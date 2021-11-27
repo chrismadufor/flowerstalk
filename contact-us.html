@@ -64,11 +64,11 @@
         <div class="contact-us-wrap">
             <form class="contact-form">
                 <h3>Get in touch</h3>
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email">
-                <input type="text" placeholder="Your Phone">
+                <input type="text" placeholder="Your Name" id = 'name'>
+                <input type="text" placeholder="Your Email" id = 'email'>
+                <input type="text" placeholder="Your Phone" id = 'phone'>
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
-                <input type="submit" value="SEND" class="submit">
+                <input type="button" value="SEND" class="submit" onclick="getData()">
             </form>
             <div class="contact-address">
                 <h3>Office Location</h3>
@@ -101,5 +101,27 @@
         <p class="copyright">&copy; 2021 &nbsp; FlowerStalkNg. All Rights Reserved | Privacy Policy</p>
     </footer>
     <script src="js/index.js"></script>
+    <script>
+        const name = document.getElementById('name')
+        const email = document.getElementById('email')
+        const phone = document.getElementById('phone')
+        const message = document.getElementById('message')
+
+        const data = {
+            firstName : '',
+            email : '',
+            phone : '',
+            message : ''
+        }
+
+        function getData() {
+            data.firstName = name.value
+            data.email = email.value
+            data.phone = phone.value
+            data.message = message.value
+            
+            localStorage.setItem('userData', JSON.stringify(data))
+        }
+    </script>
 </body>
 </html>

@@ -91,42 +91,54 @@ const dummyData = [
         name : 'Hibiscus Flower',
         price : 3500,
         img : 'd1.png',
-        id: 'p1'
+        id: 1,
+        count: 1,
+        stock: 105
     },
     {
         type : 'Flower',
         name : 'Royal Roses',
         price : 4500,
         img : 'd2.png',
-        id: 'p2'
+        id: 2,
+        count: 1,
+        stock: 95
     },
     {
         type : 'Flower',
         name : 'Pride of Barbados',
         price : 4500,
         img : 'd3.png',
-        id: 'p3'
+        id: 3,
+        count: 1,
+        stock: 165
     },
     {
         type : 'Flower',
         name : 'Hibiscus Flower',
         price : 3500,
         img : 'd4.png',
-        id: 'p4'
+        id: 4,
+        count: 1,
+        stock: 20
     },
     {
         type : 'Flower',
         name : 'Royal Roses',
         price : 4500,
         img : 'd5.png',
-        id: 'p5'
+        id: 5,
+        count: 1,
+        stock: 10
     },
     {
         type : 'Flower',
         name : 'Pride of Barbados',
         price : 4500,
         img : 'd6.png', 
-        id: 'p6'
+        id: 6,
+        count: 1,
+        stock: 70
     }
 ]
 
