@@ -16,40 +16,42 @@
 </head>
 <body>
     <header> 
-        <div class="top-nav flex between">
-            <div class="call-us">
-                <p><b>CALL US:</b> &nbsp; <span>08184389245</span></p>                
+        <div class="section-wrap">
+            <div class="top-nav flex between">
+                <div class="call-us">
+                    <p><b>CALL US:</b> &nbsp; <span>08184389245</span></p>                
+                </div>
+                <div class="social">
+                    <img src="img/ig.svg" alt="">
+                    <img src="img/twitter.svg" alt="">
+                    <img src="img/fb.svg" alt="">
+                </div>
             </div>
-            <div class="social">
-                <img src="img/ig.svg" alt="">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/fb.svg" alt="">
+            <div class="logo relative flex center">
+                <div class="logo-img flex">
+                    <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
+                    <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
+                </div>
+                
+                <div class="user-icons flex absolute">
+                    <img src="img/user.svg" alt="">
+                    <div class="relative pointer" onclick="goToCart();">
+                        <img src="img/bag.svg" alt="">
+                        <div class="cart-number flex center absolute">3</div>
+                    </div>                
+                </div>
             </div>
-        </div>
-        <div class="logo relative flex center">
-            <div class="logo-img flex">
-                <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
-                <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
-            </div>
-            
-            <div class="user-icons flex absolute">
-                <img src="img/user.svg" alt="">
-                <div class="relative pointer" onclick="goToCart();">
-                    <img src="img/bag.svg" alt="">
-                    <div class="cart-number flex center absolute">3</div>
-                </div>                
-            </div>
-        </div>
-        <div class="nav-links relative flex center">
-            <ul class="flex center">
-                <li><a href="#">About Us</a></li>
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-            </ul>
-            <div class="search absolute">
-                <input type="search" placeholder="Search">
-                <i class="fas fa-search absolute"></i>
+            <div class="nav-links relative flex center">
+                <ul class="flex center">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="#">Gifts</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <div class="search absolute">
+                    <input type="search" placeholder="Search">
+                    <i class="fas fa-search absolute"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -59,90 +61,92 @@
         <li><a href="#">Events</a></li>
         <li><a href="contact-us.html">Contact</a></li>
     </ul>
-    <div class="section-heading ">
-        <div class="flex between">
-            <h2>All Flowers</h2>
-            <select name="filter-type" id="filter-type">
-                <option value="lowest-price">Lowest Price</option>
-                <option value="highest-price">Highest Price</option>
-                <option value="birthday">Birthday</option>
-                <option value="wedding">Wedding</option>
-                <option value="anniversary">Anniversary</option>
-                <option value="party">Party</option>
-            </select>
+    <div class="section-wrap">
+        <div class="section-heading ">
+            <div class="flex between">
+                <h2>All Flowers</h2>
+                <select name="filter-type" id="filter-type">
+                    <option value="lowest-price">Lowest Price</option>
+                    <option value="highest-price">Highest Price</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="party">Party</option>
+                </select>
+            </div>
+            <hr>
         </div>
-        <hr>
+        <section class="deals">
+            <div class="category deals-wrap flex">
+                <div class="deals-item">
+                    <img src="img/d1.png" alt="">
+                    <div class="deals-item-text-wrap">
+                        <div class="deals-item-text">
+                            <p class="light-text">Flower</p>
+                            <p>Hibiscus Flower</p>
+                            <p class="price"><b>N3,500</b></p>
+                        </div>
+                        <img src="img/cart.svg" alt="" onclick="addItemToCart(1)">
+                    </div>
+                </div>
+                <div class="deals-item">
+                    <img src="img/d2.png" alt="">
+                    <div class="deals-item-text-wrap">
+                        <div class="deals-item-text">
+                            <p class="light-text">Flower</p>
+                            <p>Hibiscus Flower</p>
+                            <p class="price"><b>N3,500</b></p>
+                        </div>
+                        <img src="img/cart.svg" alt="" onclick="addItemToCart(2)">
+                    </div>
+                </div>
+                <div class="deals-item">
+                    <img src="img/d3.png" alt="">
+                    <div class="deals-item-text-wrap">
+                        <div class="deals-item-text">
+                            <p class="light-text">Flower</p>
+                            <p>Hibiscus Flower</p>
+                            <p class="price"><b>N3,500</b></p>
+                        </div>
+                        <img src="img/cart.svg" alt="" onclick="addItemToCart(3)">
+                    </div>
+                </div>
+                <div class="deals-item">
+                    <img src="img/d1.png" alt="">
+                    <div class="deals-item-text-wrap">
+                        <div class="deals-item-text">
+                            <p class="light-text">Flower</p>
+                            <p>Hibiscus Flower</p>
+                            <p class="price"><b>N3,500</b></p>
+                        </div>
+                        <img src="img/cart.svg" alt="" onclick="addItemToCart(4)">
+                    </div>
+                </div>
+                <div class="deals-item">
+                    <img src="img/d2.png" alt="">
+                    <div class="deals-item-text-wrap">
+                        <div class="deals-item-text">
+                            <p class="light-text">Flower</p>
+                            <p>Hibiscus Flower</p>
+                            <p class="price"><b>N3,500</b></p>
+                        </div>
+                        <img src="img/cart.svg" alt="" onclick="addItemToCart(5)">
+                    </div>
+                </div>
+                <div class="deals-item">
+                    <img src="img/d3.png" alt="">
+                    <div class="deals-item-text-wrap">
+                        <div class="deals-item-text">
+                            <p class="light-text">Flower</p>
+                            <p>Hibiscus Flower</p>
+                            <p class="price"><b>N3,500</b></p>
+                        </div>
+                        <img src="img/cart.svg" alt="" onclick="addItemToCart(6)">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <section class="deals">
-        <div class="category deals-wrap flex between">
-            <div class="deals-item">
-                <img src="img/d1.png" alt="">
-                <div class="deals-item-text-wrap">
-                    <div class="deals-item-text">
-                        <p class="light-text">Flower</p>
-                        <p>Hibiscus Flower</p>
-                        <p class="price"><b>N3,500</b></p>
-                    </div>
-                    <img src="img/cart.svg" alt="">
-                </div>
-            </div>
-            <div class="deals-item">
-                <img src="img/d2.png" alt="">
-                <div class="deals-item-text-wrap">
-                    <div class="deals-item-text">
-                        <p class="light-text">Flower</p>
-                        <p>Hibiscus Flower</p>
-                        <p class="price"><b>N3,500</b></p>
-                    </div>
-                    <img src="img/cart.svg" alt="">
-                </div>
-            </div>
-            <div class="deals-item">
-                <img src="img/d3.png" alt="">
-                <div class="deals-item-text-wrap">
-                    <div class="deals-item-text">
-                        <p class="light-text">Flower</p>
-                        <p>Hibiscus Flower</p>
-                        <p class="price"><b>N3,500</b></p>
-                    </div>
-                    <img src="img/cart.svg" alt="">
-                </div>
-            </div>
-            <div class="deals-item">
-                <img src="img/d1.png" alt="">
-                <div class="deals-item-text-wrap">
-                    <div class="deals-item-text">
-                        <p class="light-text">Flower</p>
-                        <p>Hibiscus Flower</p>
-                        <p class="price"><b>N3,500</b></p>
-                    </div>
-                    <img src="img/cart.svg" alt="">
-                </div>
-            </div>
-            <div class="deals-item">
-                <img src="img/d2.png" alt="">
-                <div class="deals-item-text-wrap">
-                    <div class="deals-item-text">
-                        <p class="light-text">Flower</p>
-                        <p>Hibiscus Flower</p>
-                        <p class="price"><b>N3,500</b></p>
-                    </div>
-                    <img src="img/cart.svg" alt="">
-                </div>
-            </div>
-            <div class="deals-item">
-                <img src="img/d3.png" alt="">
-                <div class="deals-item-text-wrap">
-                    <div class="deals-item-text">
-                        <p class="light-text">Flower</p>
-                        <p>Hibiscus Flower</p>
-                        <p class="price"><b>N3,500</b></p>
-                    </div>
-                    <img src="img/cart.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
     <footer class="flex center">
         <p class="footer-heading">Join our Exclusive Mailing List</p>
         <div class="suscribe flex">

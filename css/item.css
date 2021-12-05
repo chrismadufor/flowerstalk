@@ -1,3 +1,13 @@
+
+/* Categories page */
+.deals-wrap {
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.deals-item {
+    max-width: 250px;
+}
 .deals-item {
     margin-bottom: 50px;
 }

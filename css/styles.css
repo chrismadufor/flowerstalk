@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Rubik:wght@300;400;500;700&family=Dancing+Script:wght@400;700&family=Estonia&family=Petemoss&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Estonia&family=Petemoss&display=swap'); */
 
 * {
     margin: 0;
@@ -127,20 +126,24 @@ input:focus {
     right: 10%;
     max-width: 350px;
     z-index: 100;
+    height: 100%;
 }
 .slide {
     height: calc(100vh - 220px);
     max-height: 500px;
-    padding: 50px 12% 0;
+    padding: 0 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .hero-text {
-    width: 600px;
+    width: 500px;
 }
 .hero-text > * {
     margin: 10px 0;
 }
 .hero-text > h1 {
-    font-size: 60px;
+    font-size: 36px;
     font-weight: 600;
 }
 .hero-text > p {
@@ -152,6 +155,27 @@ input:focus {
     background-color: black;
     border: none;
     color: white;
+}
+.hero-item-1 {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0)), url(../img/slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.hero-item-2 {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0)), url(../img/rose.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.hero-item-3 {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0)), url(../img/box.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.slide-two {
+    /* margin-left: auto; */
 }
 .owl-dots {
     position: absolute;
@@ -231,7 +255,7 @@ input:focus {
     width: 90%;
     max-width: 600px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 }
 .section-heading {
     padding: 100px 0 50px;
@@ -395,7 +419,7 @@ ul.show-nav {
         margin: 0 0 0 20px;
     }
     .hero-text > h1 {
-        font-size: 48px;
+        font-size: 30px;
         width: 70%;
         max-width: 500px;
     }
@@ -416,9 +440,24 @@ ul.show-nav {
         right: 5%;
         max-width: 300px;
     }
+    .hero-item-2 {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0)), url(../img/val2.jpg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .hero-item-3 {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0)), url(../img/box2.jpg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .hero-item-1, .hero-item-2, .hero-item-3 {
+        background-position: bottom right;
+    }
     .hero-text > h1 {
-        font-size: 40px;
         width: 60%;
+    }
+    .section-heading {
+        padding-top: 50px;
     }
     .deals{
         padding: 20px 5%;
@@ -451,7 +490,7 @@ ul.show-nav {
         display: none;
     }
     header {
-        height: 80px;
+        height: 70px;
     }
     header .section-wrap {
         height: 80px;
@@ -495,7 +534,12 @@ ul.show-nav {
         border-bottom: 1px solid #eee;
         text-align: center;
     }
-    
+    .owl-prev {
+        left: 10px;
+    }
+    .owl-next {
+        right: 10px;
+    }
     .slide {
         max-height: 350px;
     }
@@ -505,9 +549,17 @@ ul.show-nav {
     .owl-carousel .owl-item img {
         display: none;
     }
+    .hero-item-2 {
+        background-position: left;
+    }
     .hero-text {
         text-align: center;
         width: 100%;
+    }
+    .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .slide-img {
         width: 35%;
@@ -516,11 +568,15 @@ ul.show-nav {
         display: none;
     }
     .hero-text > h1 {
-        font-size: 28px;
+        font-size: 20px;
         width: unset;
     }
     .hero-text > p {
         max-width: unset;
+        font-size: 12px;
+    }
+    .hero-item-1, .hero-item-2, .hero-item-3 {
+        background: unset;
     }
     .banner {
         padding: 0 10px;

@@ -6,6 +6,9 @@ function goToHomePage() {
 function goToCart() {
     window.location.assign('cart.html')
 }
+function goToPaymentPage() {
+    window.location.assign('payment-page.html')
+}
 
 function showMobileNav() {
     const mobileNav = document.querySelector('.mobile-nav')
