@@ -28,6 +28,7 @@ button {
     border: none;
     color: white;
     background-color: #001514;
+    cursor: pointer;
 }
 input:focus {
     outline: none;
@@ -291,6 +292,8 @@ input:focus {
     object-fit: cover;
     object-position: top;
     border-radius: 10px 10px 0 0;
+    cursor: pointer;
+
 }
 .deals-item-text-wrap {
     padding: 10px 20px;
@@ -301,6 +304,7 @@ input:focus {
 }
 .deals-item-text-wrap > img {
     width: 30px;
+    cursor: pointer;
 }
 .price {
     margin-top: 10px;
@@ -570,16 +574,42 @@ ul.show-nav {
     .hero-text > h1 {
         font-size: 20px;
         width: unset;
+        color: white;
     }
     .hero-text > p {
         max-width: unset;
         font-size: 12px;
+        color: white;
     }
-    .hero-item-1, .hero-item-2, .hero-item-3 {
+    .hero-text button {
+        background-color: white;
+        color: black;
+        font-weight: bold;
+    }
+    /* .hero-item-1, .hero-item-2, .hero-item-3 {
         background: unset;
+    } */   
+    .hero-item-1 {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/slider.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+    .hero-item-2 {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/rose.jpg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+    .hero-item-3 {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/box.jpg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
     }
     .banner {
         padding: 0 10px;
+        display: none;
     }
     .banner-item > img {
         width: 20px;

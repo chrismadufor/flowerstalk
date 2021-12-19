@@ -62,6 +62,9 @@
     </ul>
     <div class="cart-container">
         <h1 class="page-title">Your Cart</h1>
+        <div class="clear-cart">
+            <button onclick="clearCart();">Clear Cart</button>
+        </div>
          <div class="cart-items-wrap">
              <!-- Cart Items go here -->
          </div>
@@ -70,7 +73,7 @@
                 <h3>Cart Summary</h3>
                 <div class="vat flex between">
                     <p><b>VAT</b></p>
-                    <p><b>N2,000</b></p>
+                    <p class="bold" id="vat">N2,000</p>
                 </div>
                 <div class="vat flex between">
                     <p class="bold">Total</p>

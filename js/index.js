@@ -165,3 +165,74 @@ function addItemToCart(id) {
     getCartValue()
     getCartDetails()
 }
+
+function removeCartItem(id) {
+    let cartDetails = JSON.parse(sessionStorage.getItem('cartDetails'))
+    let cartItems = cartDetails.cartItems
+    const items = cartItems.filter(item => item.id !== id)
+    const cartNumber = document.querySelector('.cart-number')
+    let cartValue = cartDetails.cartValue
+    cartValue--
+    if (cartValue <= 0) cartNumber.style.display = 'none'
+    else {
+        cartNumber.style.display = 'flex'
+        cartNumber.innerHTML = cartValue
+    }
+    sessionStorage.setItem('cartDetails', JSON.stringify({...cartDetails, cartItems: items, cartValue: cartValue}))
+}
+
+function addItemToCartOnProductPage(id) {
+    
+    let button = document.querySelector('button')
+    // console.log('button', button)
+    if (button.innerHTML === 'Add to cart') {
+        addItemToCart(id)
+        button.style.backgroundColor = '#fd2929'
+        button.innerHTML = 'Remove from cart'
+    } 
+    else if (button.innerHTML === 'Remove from cart') {
+        removeCartItem(id)
+        button.style.backgroundColor = '#001514'
+        button.innerHTML = 'Add to cart'
+    }
+}
+
+// Product details page
+
+function goToProductPage(id) {
+    sessionStorage.setItem('currentPageId', id);
+    window.location.assign('product-details.html')
+}
+
+function checkIfProductIsInCart() {
+    let button = document.querySelector('button')
+    let currPage = sessionStorage.getItem('currentPageId')
+    let cartDetails = JSON.parse(sessionStorage.getItem('cartDetails'))
+    let cartItems = cartDetails.cartItems
+    let existingCartItem = cartItems.filter(item => item.id == currPage)
+    if (existingCartItem.length !== 0) {
+        button.style.backgroundColor = '#fd2929'
+        button.innerHTML = 'Remove from cart'
+        
+    } else console.log('Not in cart')
+}
+
+function productDetailsPage() {
+    const pageWrap = document.querySelector('.product-details-container')
+    let currentPageId = sessionStorage.getItem('currentPageId')
+    let currentProduct = dummyData.filter(item => item.id == currentPageId)
+    pageWrap.innerHTML = `
+        <div class="product-image">
+            <img src='img/${currentProduct[0].img}' alt="">
+        </div>
+        <div class="product-details">
+            <div>
+                <h1>${currentProduct[0].name}</h1>
+                <p class="stock light-text">In stock - ${currentProduct[0].stock}</p>
+                <div class="price">Price: ${currentProduct[0].price}</div>
+            </div>
+            <button onclick = 'addItemToCartOnProductPage(${currentPageId})'>Add to cart</button>
+        </div>
+    `
+}
+productDetailsPage()

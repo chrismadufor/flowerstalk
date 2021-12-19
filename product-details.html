@@ -14,42 +14,43 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Product Details Page | Flowerstalkng</title>
 </head>
-<body>
+<body onload="checkIfProductIsInCart();">
     <header> 
-        <div class="top-nav flex between">
-            <div class="call-us">
-                <p><b>CALL US:</b> &nbsp; <span>08184389245</span></p>                
+        <div class="section-wrap">
+            <div class="top-nav flex between">
+                <div class="call-us">
+                    <p><b>CALL US:</b> &nbsp; <span>08184389245</span></p>                
+                </div>
+                <div class="social">
+                    <img src="img/ig.svg" alt="">
+                    <img src="img/twitter.svg" alt="">
+                    <img src="img/fb.svg" alt="">
+                </div>
             </div>
-            <div class="social">
-                <img src="img/ig.svg" alt="">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/fb.svg" alt="">
+            <div class="logo relative flex center">
+                <div class="logo-img flex">
+                    <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
+                    <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
+                </div>
+                
+                <div class="user-icons flex absolute">
+                    <div class="relative pointer" onclick="goToCart();">
+                        <img src="img/bag.svg" alt="">
+                        <div class="cart-number flex center absolute">3</div>
+                    </div>                
+                </div>
             </div>
-        </div>
-        <div class="logo relative flex center">
-            <div class="logo-img flex">
-                <i class="fas fa-bars mobile-nav-icon" onclick="showMobileNav();"></i>
-                <img src="img/logo.png" class="pointer" alt="" onclick="goToHomePage();">
-            </div>
-            
-            <div class="user-icons flex absolute">
-                <img src="img/user.svg" alt="">
-                <div class="relative pointer" onclick="goToCart();">
-                    <img src="img/bag.svg" alt="">
-                    <div class="cart-number flex center absolute">3</div>
-                </div>                
-            </div>
-        </div>
-        <div class="nav-links relative flex center">
-            <ul class="flex center">
-                <li><a href="#">About Us</a></li>
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-            </ul>
-            <div class="search absolute">
-                <input type="search" placeholder="Search">
-                <i class="fas fa-search absolute"></i>
+            <div class="nav-links relative flex center">
+                <ul class="flex center">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="gift-page.html">Gifts</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+                <div class="search absolute">
+                    <input type="search" placeholder="Search">
+                    <i class="fas fa-search absolute"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -67,14 +68,14 @@
             <div>
                 <h1>Hibiscus Flower</h1>
                 <p class="stock light-text">In stock - 200</p>
-                <div class="quantity flex">
+                <!-- <div class="quantity flex">
                     <p>Quantity:</p>
                     <div class="number-wrap flex">
                         <i class="far fa-minus-circle"></i>
                         <input type="text" class="number" value="1">
                         <i class="far fa-plus-circle"></i>
                     </div>
-                </div>
+                </div> -->
                 <div class="price">Price: 7,000</div>
             </div>
             <button>Add to cart</button>
@@ -101,5 +102,7 @@
         <p class="copyright">&copy; 2021 &nbsp; FlowerStalkNg. All Rights Reserved | Privacy Policy</p>
     </footer>
     <script src="js/index.js"></script>
+    <script src="js/cart.js"></script>
+
 </body>
 </html> 

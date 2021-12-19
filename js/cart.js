@@ -1,5 +1,14 @@
 //Populate page with cart items from session storage
 
+function manualInputOfNumber(e, id) {
+    let cartDetails = JSON.parse(sessionStorage.getItem('cartDetails'))
+    let cartItems = cartDetails.cartItems
+    let cartItem = cartItems.filter(cartItem => cartItem.id === id)
+    cartItem[0].count = e.value
+    sessionStorage.setItem('cartDetails', JSON.stringify(cartDetails))
+    fillCartPage()
+}
+
 function fillCartPage() {
     const cartContainer = document.querySelector('.cart-container')
     const cartItemsWrap = document.querySelector('.cart-items-wrap')
@@ -29,7 +38,7 @@ function fillCartPage() {
                         <p>x</p>
                         <div class="count-wrap flex">
                             <i class="far fa-minus-circle" onclick="decreaseItemNumber(${item.id})"></i>
-                            <input type="text" class="itemNumber" value= ${item.count}>
+                            <input type="text" class="itemNumber" onchange='manualInputOfNumber(this, ${item.id});' value= ${item.count}>
                             <i class="far fa-plus-circle" onclick="increaseItemNumber(${item.id})"></i>
                         </div>
                     </div>
@@ -48,6 +57,7 @@ function fillCartPage() {
         stage.forEach(item => cartItemsWrap.appendChild(item))
 
         // Total of the cart items
+        const vat = document.getElementById('vat')
         const totals = document.querySelectorAll('.item-price')
         totalsArray = []
         totals.forEach(total => totalsArray.push(Number(total.innerHTML)))
@@ -90,4 +100,17 @@ function deleteCartItem(id) {
     sessionStorage.setItem('cartDetails', JSON.stringify({...cartDetails, cartItems: items, cartValue: cartValue}))
     fillCartPage()
 }
-// Delete an item from cart
+
+function clearCart() {
+    // sessionStorage.removeItem('cartDetails')
+    let cartDetails = JSON.parse(sessionStorage.getItem('cartDetails'))
+    let cartItems = cartDetails.cartItems
+    const cartNumber = document.querySelector('.cart-number')
+    let cartValue = cartDetails.cartValue
+    cartValue = 0;
+    cartItems = [];
+    cartNumber.style.display = 'none'
+    sessionStorage.setItem('cartDetails', JSON.stringify({...cartDetails, cartItems: cartItems, cartValue: cartValue}))
+    fillCartPage()
+}
+
