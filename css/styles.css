@@ -440,6 +440,13 @@ ul.show-nav {
     }
 }
 @media (max-width: 850px) {
+    .search > input {
+        width: 200px;
+    }
+    .nav-links ul li {
+        padding: 0 5px;
+        margin: 0 10px;
+    }
     .slide-img {
         right: 5%;
         max-width: 300px;
@@ -623,11 +630,12 @@ ul.show-nav {
     }
     .text-section {
         height: 300px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/text-bg.jpg');
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/text-bg.jpg'); */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/text-bg.jpg');
     }
     .text-section p {
         font-size: 14px;
-        color: white;
+        color: rgb(0, 0, 0);
         font-weight: normal;
     }
     .section-heading {

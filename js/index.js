@@ -93,7 +93,7 @@ const dummyData = [
         type : 'Flower',
         name : 'Hibiscus Flower',
         price : 3500,
-        img : 'd1.png',
+        img : 'd1.jpg',
         id: 1,
         count: 1,
         stock: 105
@@ -102,7 +102,7 @@ const dummyData = [
         type : 'Flower',
         name : 'Royal Roses',
         price : 4500,
-        img : 'd2.png',
+        img : 'd2.jpg',
         id: 2,
         count: 1,
         stock: 95
@@ -111,7 +111,7 @@ const dummyData = [
         type : 'Flower',
         name : 'Pride of Barbados',
         price : 4500,
-        img : 'd3.png',
+        img : 'd3.jpg',
         id: 3,
         count: 1,
         stock: 165
@@ -120,7 +120,7 @@ const dummyData = [
         type : 'Flower',
         name : 'Hibiscus Flower',
         price : 3500,
-        img : 'd4.png',
+        img : 'd4.jpg',
         id: 4,
         count: 1,
         stock: 20

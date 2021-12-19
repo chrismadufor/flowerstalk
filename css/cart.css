@@ -5,6 +5,10 @@
     max-width: 800px;
     margin: 0 auto;
 }
+.clear-cart button {
+    padding: 5px 10px;
+    border-radius: 4px;
+}
 .cart-items-wrap {
     padding: 30px 0;
 }
