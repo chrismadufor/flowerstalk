@@ -90,8 +90,8 @@ getCartValue()
 
 const dummyData = [
     {
-        type : 'Flower',
-        name : 'Hibiscus Flower',
+        type : 'flower',
+        name : 'Flower box and chocolate',
         price : 3500,
         img : 'd1.jpg',
         id: 1,
@@ -99,8 +99,8 @@ const dummyData = [
         stock: 105
     },
     {
-        type : 'Flower',
-        name : 'Royal Roses',
+        type : 'flower',
+        name : 'Love box, chocolate and wine',
         price : 4500,
         img : 'd2.jpg',
         id: 2,
@@ -108,8 +108,8 @@ const dummyData = [
         stock: 95
     },
     {
-        type : 'Flower',
-        name : 'Pride of Barbados',
+        type : 'gift',
+        name : 'Happy Valentine',
         price : 4500,
         img : 'd3.jpg',
         id: 3,
@@ -117,8 +117,8 @@ const dummyData = [
         stock: 165
     },
     {
-        type : 'Flower',
-        name : 'Hibiscus Flower',
+        type : 'gift',
+        name : 'I love you Bouqet',
         price : 3500,
         img : 'd4.jpg',
         id: 4,
@@ -126,23 +126,149 @@ const dummyData = [
         stock: 20
     },
     {
-        type : 'Flower',
-        name : 'Royal Roses',
+        type : 'flower',
+        name : 'Aquapack Bouqet',
         price : 4500,
-        img : 'd5.png',
+        img : 'd5.jpg',
         id: 5,
         count: 1,
         stock: 10
     },
     {
-        type : 'Flower',
-        name : 'Pride of Barbados',
-        price : 4500,
-        img : 'd6.png', 
+        type : 'flower',
+        name : 'Be Mine Bouqet',
+        price : 6000,
+        img : 'd6.jpg', 
         id: 6,
         count: 1,
         stock: 70
-    }
+    },
+    {
+        type : 'flower',
+        name : 'Big Love Box',
+        price : 4500,
+        img : 'd7.jpg', 
+        id: 7,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'Heart Shaped Box',
+        price : 2500,
+        img : 'd8.png', 
+        id: 8,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'Love Flower Box',
+        price : 4500,
+        img : 'd9.jpg', 
+        id: 9,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'Forza Speciale',
+        price : 4000,
+        img : 'd10.jpg', 
+        id: 10,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'Love In The Air',
+        price : 3000,
+        img : 'd11.jpg', 
+        id: 11,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'Love You Roses',
+        price : 4000,
+        img : 'd12.jpg', 
+        id: 12,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'My Baby',
+        price : 5000,
+        img : 'd13.png', 
+        id: 13,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'My Everything',
+        price : 4000,
+        img : 'd14.jpg', 
+        id: 14,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'My Oasis',
+        price : 5000,
+        img : 'd15.jpg', 
+        id: 15,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'My Sweet Valentine',
+        price : 4500,
+        img : 'd16.png', 
+        id: 16,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'My Valentine',
+        price : 4000,
+        img : 'd17.jpg', 
+        id: 17,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'My World',
+        price : 2500,
+        img : 'd18.jpg', 
+        id: 18,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'Plant Tropical',
+        price : 10500,
+        img : 'd19.jpg', 
+        id: 19,
+        count: 1,
+        stock: 70
+    },
+    {
+        type : 'flower',
+        name : 'Presentation Bouqet',
+        price : 5500,
+        img : 'd20.jpg', 
+        id: 20,
+        count: 1,
+        stock: 70
+    },
 ]
 
 function addItemToCart(id) {
@@ -236,3 +362,46 @@ function productDetailsPage() {
     `
 }
 productDetailsPage()
+
+function fillFlowersPage() {
+    let pageWrap = document.querySelector('.deals-wrap')
+    let flowerItems = dummyData.filter(item => item.type === 'flower')
+    flowerItems.map(item => {
+        let itemWrap = document.createElement('div')
+        itemWrap.classList.add('deals-item')
+        itemWrap.innerHTML = `
+        <img src="img/${item.img}" alt=""
+        onclick="goToProductPage(${item.id});">
+        <div class="deals-item-text-wrap">
+            <div class="deals-item-text">
+                <p class="light-text">Flower</p>
+                <p>${item.name}</p>
+                <p class="price"><b>N${item.price}</b></p>
+            </div>
+            <img src="img/cart.svg" alt="" onclick="addItemToCart(${item.id})">
+        </div>
+        `
+        pageWrap.appendChild(itemWrap)
+    })
+}
+function fillGiftsPage() {
+    let pageWrap = document.querySelector('.deals-wrap')
+    let flowerItems = dummyData.filter(item => item.type === 'gift')
+    flowerItems.map(item => {
+        let itemWrap = document.createElement('div')
+        itemWrap.classList.add('deals-item')
+        itemWrap.innerHTML = `
+        <img src="img/${item.img}" alt=""
+        onclick="goToProductPage(${item.id});">
+        <div class="deals-item-text-wrap">
+            <div class="deals-item-text">
+                <p class="light-text">Gift</p>
+                <p class="item-name">${item.name}</p>
+                <p class="price"><b>N${item.price}</b></p>
+            </div>
+            <img src="img/cart.svg" alt="" onclick="addItemToCart(${item.id})">
+        </div>
+        `
+        pageWrap.appendChild(itemWrap)
+    })
+}

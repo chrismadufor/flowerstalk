@@ -277,7 +277,7 @@ input:focus {
 }
 .deals-item {
     width: 30%;
-    max-width: 250px;
+    max-width: 300px;
     border-radius: 0 0 10px 10px;
     background-color: white;
     border-radius: 10px;
@@ -287,7 +287,7 @@ input:focus {
 .deals-item > img {
     display: block;
     width: 100%;
-    max-height: 250px;
+    height: 200px;
     /* height: auto; */
     object-fit: cover;
     object-position: top;
@@ -301,10 +301,14 @@ input:focus {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
+    height: 110px;
 }
 .deals-item-text-wrap > img {
     width: 30px;
     cursor: pointer;
+}
+.deals-item-text {
+    margin-right: 10px;
 }
 .price {
     margin-top: 10px;
@@ -535,7 +539,7 @@ ul.show-nav {
         max-width: 250px;
         height: 100%;
         padding: 10px 0;
-        transition: transform 0.5s;
+        transition: transform 0.3s;
         transform: translateX(0%);
         z-index: 1000;
     }
@@ -630,13 +634,11 @@ ul.show-nav {
     }
     .text-section {
         height: 300px;
-        /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/text-bg.jpg'); */
         background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/text-bg.jpg');
     }
     .text-section p {
         font-size: 14px;
         color: rgb(0, 0, 0);
-        font-weight: normal;
     }
     .section-heading {
         padding: 20px 5%;
@@ -660,15 +662,15 @@ ul.show-nav {
         padding: 0;
         margin: 0 10px 20px 0;
         min-width: 150px;
+        height: 100%;
     }
     .deals-item-text-wrap {
         padding: 10px;
-    }
-    .deals-item-text-wrap {
         font-size: 12px;
     }
     .deals-item > img {
         height: 40vmin;
+        max-height: 300px;
     }
     .deals-nav {
         display: none;
