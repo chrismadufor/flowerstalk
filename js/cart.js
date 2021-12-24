@@ -34,7 +34,7 @@ function fillCartPage() {
                         </div>
                     </div>
                     <div class="price-wrap flex between">
-                        <p>N${item.price}</p>
+                        <p>N${new Intl.NumberFormat().format(item.price)}</p>
                         <p>x</p>
                         <div class="count-wrap flex">
                             <i class="far fa-minus-circle" onclick="decreaseItemNumber(${item.id})"></i>
@@ -62,7 +62,12 @@ function fillCartPage() {
         totalsArray = []
         totals.forEach(total => totalsArray.push(Number(total.innerHTML)))
         const total = totalsArray.reduce((curr, acc) => curr + acc, 0)
-        document.getElementById('grand-total').innerHTML = `N${total}`
+        const vatValue = Math.floor(0.075 * total)
+        vat.innerHTML = `N${new Intl.NumberFormat().format(vatValue)}`
+        let subTotal = total + vatValue
+        let subTotalStr = new Intl.NumberFormat().format(subTotal)
+        document.getElementById('grand-total').innerHTML = `N${subTotalStr}`
+        sessionStorage.setItem('totalCartValue', subTotal)
     }
 }
 fillCartPage()

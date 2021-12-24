@@ -43,7 +43,7 @@ function pickDeliveryMethod() {
     let pickupInputs = document.querySelector('.pickup-inputs')
     let deliveryInputs = document.querySelector('.delivery-inputs')
 
-    if(window.innerWidth > 500) {
+    if(window.innerWidth > 760) {
         if(pickUp.checked) {
             pickupInputs.classList.remove('hide-inputs')
             deliveryInputs.classList.add('hide-inputs')
@@ -276,6 +276,8 @@ function addItemToCart(id) {
     let cartItems = cartDetails.cartItems
     let cartValue = cartDetails.cartValue
     let existingCartItem = cartItems.filter(item => item.id === id)
+    let notification = document.querySelector('.item-added')
+    let cartNotification = document.querySelector('.item-in-cart')
     
     // Check if item is already in cart
 
@@ -283,9 +285,17 @@ function addItemToCart(id) {
         cartValue++
         newCartItem = dummyData.filter(item => item.id === id)
         sessionStorage.setItem('cartDetails', JSON.stringify({...cartDetails, cartValue: cartValue, cartItems: [...cartItems, newCartItem[0]]}))
+
+        setTimeout(() => {
+            notification.classList.remove('show')
+        }, 2000) 
+        notification.classList.add('show')
     }
     else {
-        alert('Item already in cart!')
+        setTimeout(() => {
+            cartNotification.classList.remove('show')
+        }, 2000) 
+        cartNotification.classList.add('show')
     }
     
     getCartValue()
@@ -355,7 +365,7 @@ function productDetailsPage() {
             <div>
                 <h1>${currentProduct[0].name}</h1>
                 <p class="stock light-text">In stock - ${currentProduct[0].stock}</p>
-                <div class="price">Price: ${currentProduct[0].price}</div>
+                <div class="price">Price: N${new Intl.NumberFormat().format(currentProduct[0].price)}</div>
             </div>
             <button onclick = 'addItemToCartOnProductPage(${currentPageId})'>Add to cart</button>
         </div>
@@ -376,7 +386,7 @@ function fillFlowersPage() {
             <div class="deals-item-text">
                 <p class="light-text">Flower</p>
                 <p>${item.name}</p>
-                <p class="price"><b>N${item.price}</b></p>
+                <p class="price"><b>N${new Intl.NumberFormat().format(item.price)}</b></p>
             </div>
             <img src="img/cart.svg" alt="" onclick="addItemToCart(${item.id})">
         </div>
@@ -384,6 +394,7 @@ function fillFlowersPage() {
         pageWrap.appendChild(itemWrap)
     })
 }
+
 function fillGiftsPage() {
     let pageWrap = document.querySelector('.deals-wrap')
     let flowerItems = dummyData.filter(item => item.type === 'gift')
@@ -397,11 +408,18 @@ function fillGiftsPage() {
             <div class="deals-item-text">
                 <p class="light-text">Gift</p>
                 <p class="item-name">${item.name}</p>
-                <p class="price"><b>N${item.price}</b></p>
+                <p class="price"><b>N${new Intl.NumberFormat().format(item.price)}</b></p>
             </div>
             <img src="img/cart.svg" alt="" onclick="addItemToCart(${item.id})">
         </div>
         `
         pageWrap.appendChild(itemWrap)
     })
+}
+
+function getGrandTotal() {
+    let totalWrap = document.querySelector('.grandTotal')
+    let grandTotal = sessionStorage.getItem('totalCartValue')
+
+    totalWrap.innerHTML = `N${new Intl.NumberFormat().format(grandTotal)}`
 }
